@@ -1,0 +1,253 @@
+$main: #0c0c0c;
+$bg: #f4f4f4;
+$blue: #3922c5;
+$grey: #d9d9d9;
+$text: #494949;
+$white: #ffffff;
+
+* {
+  font-family: MRegular;
+  transition: 200ms ease-in-out;
+}
+.hidden {
+  opacity: 0;
+}
+main {
+  padding: 40px 20px;
+  background-color: $bg;
+  min-height: 100vh;
+}
+.navbar {
+  background-color: transparent;
+  width: 100%;
+  gap: 20px;
+}
+.tabs-container {
+  gap: 20px;
+}
+.navbar-nav {
+  padding: 20px !important;
+  width: 100%;
+}
+.section-title {
+  font-family: MMedium;
+  font-size: 20px;
+  line-height: 30px;
+  color: $main;
+
+  &:focus {
+    color: $blue !important;
+  }
+}
+.section-title::after {
+  display: none !important;
+}
+.dropdown-card {
+  border: none !important;
+  padding: 30px 20px !important;
+}
+.card-container {
+  padding: 0;
+}
+.product-pic {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.product-title {
+  font-family: MBold;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.description-container,
+.add-char-container {
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.product-description {
+  font-family: MRegular;
+  font-size: 14px;
+  line-height: 21px;
+}
+.hr {
+  margin: 0;
+  margin-bottom: 30px;
+  height: 1px;
+  opacity: 1;
+  color: $grey;
+}
+.char-title,
+.add-char-title {
+  font-family: MMedium;
+  font-size: 16px;
+  line-height: 24px;
+  color: $main;
+  margin-bottom: 15px;
+}
+.characteristics {
+  margin-bottom: 30px;
+}
+.text-list {
+  gap: 15px;
+}
+.list-item {
+  list-style-type: none;
+  font-family: MRegular;
+  font-size: 14px;
+  line-height: 21px;
+  gap: 10px;
+}
+.form-control.add-charachteristic {
+  background: $white;
+  border: 1px solid $grey;
+  border-radius: 16px;
+  height: 52px;
+  font-size: 14px;
+  padding: 14px 16px;
+  color: $main;
+  ::placeholder {
+    color: $grey;
+  }
+  :focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: $blue !important;
+  }
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: $blue !important;
+}
+.add-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  height: 52px;
+  background: $blue;
+  border-radius: 16px;
+  border: none;
+  color: $white;
+  font-family: MRegular;
+  font-size: 14px;
+  line-height: 21px;
+}
+.navbar-nav,
+.confirmation-container {
+  background: $white;
+  box-shadow: 0px 10px 40px #0c0c0c1a;
+  border-radius: 20px;
+  padding: 30px 20px;
+}
+.ok-btn,
+.cancel-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 24px;
+  width: 120px;
+  height: 52px;
+  border-radius: 16px;
+  border: none;
+  font-family: MRegular;
+}
+.ok-btn {
+  color: $white;
+  background: $blue;
+}
+.cancel-btn {
+  color: $main;
+  background: $white;
+}
+.add-btn,
+.ok-btn {
+  &:hover {
+    background: #2c1a9a;
+  }
+  &:focus {
+    background: #1f1368;
+  }
+}
+.cancel-btn:focus {
+  border: 1px solid $blue;
+}
+
+// ======================================
+@media (min-width: 900px) {
+  main {
+    padding: 81px 102px;
+  }
+  #tabs-container {
+    background-color: transparent;
+  }
+  #tab-content {
+    background-color: $white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .nav-item {
+    background-color: $grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .nav-link {
+    background-color: $white;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    padding: 20px 24px !important;
+    font-family: MMedium;
+    font-size: 22px !important;
+    line-height: 33px;
+    color: $main !important;
+  }
+  .nav-link.active {
+    color: $blue !important;
+    border-color: $white !important;
+  }
+  .nav-tabs {
+    border-bottom: none !important;
+  }
+  #mount-bike-card,
+  #female-bike-card {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .card-container {
+    padding: 40px 60px;
+  }
+  .product-pic {
+    position: absolute;
+    left: -50px;
+    z-index: -1;
+  }
+  .product-title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+  .product-description,
+  .list-item,
+  .add-btn,
+  .ok-btn,
+  .cancel-btn {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .text-list {
+    gap: 100px;
+  }
+  .char-title,
+  .add-char-title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .confirmation-container {
+    gap: 10px;
+  }
+}
